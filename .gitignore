@@ -1,0 +1,16 @@
+# .gitignore
+
+# Secrets
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# IDE and OS specific files
+.vscode/
+.idea/
+.DS_Store
+
+# Poetry virtual environment
+.venv/
