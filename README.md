@@ -57,13 +57,3 @@ This project is built with a modern, 2025-ready open-source stack:
 *   **Data Validation**: [Pydantic](https://pydantic.dev/)
 *   **Dependency Management**: [Poetry](https://python-poetry.org/)
 
-
-🗺️ Future Roadmap
-
-Style Memory: Allow users to save and reuse preferred aesthetic profiles.
-
-Direct API Integration: One-click generation by connecting directly to image/video APIs like Fal.ai or Replicate.
-
-Visual Feedback Loop: Use CLIP or other vision models to score the alignment of generated prompts.
-
-Advanced Prompt History: Save, search, and tag your favorite prompts in a persistent database like ChromaDB.
