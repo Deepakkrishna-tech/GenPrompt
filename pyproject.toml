@@ -1,25 +1,33 @@
-[project]
+[tool.poetry]
 name = "genprompt"
 version = "0.1.0"
 description = "An AI-powered creative prompt engineering tool"
-authors = [
-    {name = "deepak",email = "deepak201298.s@gmail.com"}
-]
+authors = ["deepak <deepak201298.s@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.11, <4.0"
-packages = [{include = "src"}]
-dependencies = [
-    "streamlit (>=1.46.1,<2.0.0)",
-    "langgraph (>=0.5.1,<0.6.0)",
-    "langchain (>=0.3.26,<0.4.0)",
-    "langchain-openai (>=0.3.27,<0.4.0)",
-    "python-dotenv (>=1.1.1,<2.0.0)",
-    "pillow (>=11.3.0,<12.0.0)",
-    "langchain-core (>=0.3.68,<0.4.0)",
-    "pydantic (>=2.11.7,<3.0.0)"
-]
+packages = [{include = "src"}] # This correctly tells Poetry where your code is.
 
+[tool.poetry.dependencies]
+python = ">=3.11, <4.0"
+# --- Frontend & Core Logic ---
+streamlit = ">=1.46.1,<2.0.0"
+langgraph = ">=0.5.1,<0.6.0"
+langchain = ">=0.3.26,<0.4.0"
+langchain-openai = ">=0.3.27,<0.4.0"
+python-dotenv = ">=1.1.1,<2.0.0"
+pillow = ">=11.3.0,<12.0.0"
+langchain-core = ">=0.3.68,<0.4.0"
+pydantic = ">=2.11.7,<3.0.0"
+
+# --- Local Vision Model Dependencies ---
+# torch = "^2.3.1"
+# transformers = "^4.41.2"
+# sentencepiece = "0.1.99"
+
+# --- Backend Server Dependencies (These were missing) ---
+fastapi = "^0.111.0"                                      # <-- RECOMMENDED ADDITION
+uvicorn = {extras = ["standard"], version = "^0.29.0"}    # <-- RECOMMENDED ADDITION
+python-multipart = ">=0.0.20,<0.0.21"                     # <-- Already here, good.
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

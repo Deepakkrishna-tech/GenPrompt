@@ -1,59 +1,44 @@
-# 🎨 **GenPrompt** : Your AI Creative Partner
+# 📡**GenPrompt** :  **Creative Co-Pilot**
 
 **GenPrompt** is an advanced, agent-based creative tool that transforms static images into dynamic prompts for both AI image and video generation.
 
-[![Python Version](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Framework](https://img.shields.io/badge/Framework-Streamlit-FF4B4B)](https://streamlit.io)
-[![Agent Orchestration](https://img.shields.io/badge/Agents-LangGraph-E86F2C)](https://langchain.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-It's designed for artists, designers, and storytellers who want to maintain **creative continuity**—bridging the gap between a single visual idea and a full-fledged cinematic scene. Instead of just generating outputs, GenPrompt provides you with world-class, production-ready prompts to use in your favorite tools like Midjourney, Stable Diffusion, Runway, or Pika.
+![alt text](https://img.shields.io/badge/python-3.12-blue.svg)
 
----
 
-## ✨ Core Features
+![alt text](https://img.shields.io/badge/FastAPI-0.111-green.svg)
 
-GenPrompt operates as a modular, two-stage workflow powered by a team of specialized AI agents:
 
-### **Stage 1: Image → Image Prompt (Prompt A)**
-Upload any source image and the **VisualAnalystAgent** deconstructs its style, mood, and composition. Then, the **PromptEngineerAgent**, acting as a legendary prompt artist, synthesizes this analysis into a rich, evocative prompt perfect for generating new, high-fidelity images.
+![alt text](https://img.shields.io/badge/Streamlit-1.46-orange.svg)
 
-*   **Deep Visual Analysis**: Goes beyond keywords to understand artistic intent.
-*   **Creative Prompt Synthesis**: Generates prompts that are more artistic and nuanced than simple descriptions.
-*   **Iterative Refinement**: A built-in loop allows you to conversationally edit and perfect the prompt with the **RefinerAgent**.
 
-### **Stage 2: Image → Video Prompt (Prompt B)**
-This is where the magic of creative continuity happens. You can either:
-1.  Upload the image you generated with Prompt A.
-2.  Upload any new image to start fresh.
+![alt text](https://img.shields.io/badge/LangGraph-0.5-purple.svg)
 
-The **VideoDirectorAgent** then steps in.
-*   **Context-Aware Direction**: If you use the full workflow, the agent analyzes **both** the original source image and the new image to understand the creative evolution, producing a video prompt that honors the original artistic soul.
-*   **AI Collaboration via Creative Brief**: Don't know how to describe camera movements? No problem. A guided "Creative Brief" lets you suggest moods and ideas, and the AI Director elevates them into professional cinematic language.
 
----
+![alt text](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## 🚀 The Agentic Workflow
+GenPrompt is an AI-first creative co-pilot that transforms images into high-quality, style-consistent prompts for advanced text-to-image and text-to-video models. It is designed to empower artists, designers, and storytellers to build cinematic or stylized assets with creative continuity—not by generating assets, but by engineering the perfect prompt using an agentic, context-aware system.
 
-GenPrompt is built on a sophisticated, conditional graph using **LangGraph**. This allows for a flexible, multi-agent system where different AI specialists collaborate to bring your vision to life.
+🎯 Core Vision
 
-| Agent                 | Role                                                                        | Core Task                                                   |
-| --------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **VisualAnalyst**     | A seasoned Art Director                                                     | Deconstructs an image into structured, artistic insights.   |
-| **PromptEngineer**    | A legendary Prompt Artist                                                   | Synthesizes analysis into a masterful text-to-image prompt. |
-| **VideoDirector**     | A visionary Film Director                                                   | Translates images and ideas into cinematic video direction. |
-| **Refiner**           | A master Prompt Editor                                                      | Seamlessly integrates user feedback into any prompt.        |
+In the world of generative AI, the quality of the output is a direct reflection of the quality of the prompt. GenPrompt acts as a "prompt sommelier," deconstructing the visual DNA of a source image and translating its essence into powerful, model-ready instructions. This ensures creative and stylistic consistency across different generative tasks.
 
----
+🚀 Key Features
 
-## 🛠️ Tech Stack
+Two-Stage Workflow: A modular pipeline that first generates a detailed image prompt (Prompt A) and then elevates it into a cinematic video direction (Prompt B).
 
-This project is built with a modern, 2025-ready open-source stack:
+Deep Visual Analysis: Utilizes powerful vision models (like GPT-4o) to go beyond simple keywords, understanding artistic style, mood, lighting, and composition.
 
-*   **Frontend**: [Streamlit](https://streamlit.io/)
-*   **Agent Orchestration**: [LangGraph](https://github.com/langchain-ai/langgraph)
-*   **LLM Integration**: [LangChain](https://www.langchain.com/) (using GPT-4o)
-*   **Prompt Templating**: [Jinja2](https://jinja.palletsprojects.com/)
-*   **Data Validation**: [Pydantic](https://pydantic.dev/)
-*   **Dependency Management**: [Poetry](https://python-poetry.org/)
+Agent-Powered Synthesis: Employs a team of specialized AI agents (built with LangChain and LangGraph) to analyze, engineer, and refine prompts, each with a unique persona and goal.
 
+Iterative Refinement: A built-in human-in-the-loop feedback system allows you to conversationally edit and perfect both image and video prompts until they match your vision.
+
+🛠️ System Architecture
+
+GenPrompt is built on a modern, decoupled architecture to ensure scalability and maintainability.
+
+Frontend: A user-friendly interface built with Streamlit, providing real-time interaction and prompt previews.
+
+Backend: A robust and asynchronous API server built with FastAPI, handling all the heavy computational work.
+
+Agentic Core: An intelligent state machine orchestrated by LangGraph, which routes tasks between specialized AI agents.
