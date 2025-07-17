@@ -58,7 +58,7 @@ def main():
                     st.warning("Please upload a file first.")
                     
         with col2:
-            st.subheader("🕹️ Prompt A: Text-to-Image")
+            st.subheader("🕹️ Prompt A: For Image")
             if current_state_dict.get("image_prompt"):
                 prompt_obj = ImagePrompt.model_validate(current_state_dict["image_prompt"])
                 st.write("**Prompt Preview:**")
