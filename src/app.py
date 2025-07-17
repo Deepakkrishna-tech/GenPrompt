@@ -11,7 +11,7 @@ from .core.schemas import AppState, ImagePrompt
 
 def main():
     """The main function that runs the Streamlit UI."""
-    st.set_page_config(page_title="GenPrompt", layout="wide", page_icon="🎨")
+    st.set_page_config(page_title="GenPrompt", layout="wide", page_icon="📡")
     load_dotenv()
 
     BACKEND_URL = "http://127.0.0.1:8000/api"
@@ -36,7 +36,7 @@ def main():
                 st.error(f"API Error: {e}")
 
     # --- UI Rendering ---
-    st.title("🎨 GenPrompt")
+    st.title("📡GenPrompt")
     st.markdown("Your AI Creative Partner for Image and Video Prompts.")
 
     tab1, tab2 = st.tabs(["**Stage 1: Generate Prompt A**", "**Stage 2: Generate Prompt B**"])
@@ -58,7 +58,7 @@ def main():
                     st.warning("Please upload a file first.")
                     
         with col2:
-            st.subheader("✅ Prompt A: Text-to-Image")
+            st.subheader("🕹️ Prompt A: Text-to-Image")
             if current_state_dict.get("image_prompt"):
                 prompt_obj = ImagePrompt.model_validate(current_state_dict["image_prompt"])
                 st.write("**Prompt Preview:**")
@@ -113,7 +113,7 @@ def main():
 
             # Step 3: The form for the creative brief
             with st.form("creative_brief_form"):
-                st.subheader("Creative Brief")
+                st.subheader("Creative Box")
                 
                 moods = st.multiselect(
                     "2. Select Moods (Optional)",
@@ -123,7 +123,7 @@ def main():
                     "3. Suggest Camera Movement (Optional)",
                     ["(AI Decides)", "Slow Push-In", "Fast Pull-Out", "Tracking Shot (Follow Subject)", "Crane Shot (Up/Down)", "Static / No Movement"]
                 )
-                notes = st.text_area("4. Additional Notes (Optional)", placeholder="e.g., 'focus on the character's eyes', 'make the rain feel heavy'")
+                notes = st.text_area("4. Additional Notes (Optional)")
                 
                 # --- THIS IS THE CORRECTED LOGIC ---
                 submitted = st.form_submit_button("Generate Video Prompt", use_container_width=True, type="primary")
